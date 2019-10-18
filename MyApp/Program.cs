@@ -1,17 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Amazon;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ServiceStack;
 using ServiceStack.Messaging;
-using ServiceStack.Testing;
-using ServiceStack.Aws;
-using MyApp.ServiceModel;
 using ServiceStack.Aws.Sqs;
+using MyApp.ServiceModel;
 
 namespace MyApp
 {
@@ -28,7 +22,7 @@ namespace MyApp
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
-                    AppHost = new BasicAppHost(typeof(MyService).Assembly)
+                    AppHost = new GenericAppHost(typeof(MyService).Assembly)
                     {
                         ConfigureAppHost = host =>
                         {
