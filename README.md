@@ -1,2 +1,2 @@
 # worker-sqs
-.NET Core 3.0 AWS SQS MQ Worker Service
+.NET Core 3.1 AWS SQS MQ Worker Service
