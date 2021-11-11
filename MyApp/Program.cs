@@ -11,7 +11,7 @@ namespace MyApp
 {
     public class Program
     {
-        public static ServiceStackHost AppHost { get; set; }
+        public static ServiceStackHost? AppHost { get; set; }
 
         public static void Main(string[] args)
         {
